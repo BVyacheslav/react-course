@@ -1,0 +1,8 @@
+.projectList {
+  column-count: 3;
+}
+
+.project {
+  display: inline-block;
+  width: 300px;
+}
