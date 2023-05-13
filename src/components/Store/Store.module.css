@@ -1,0 +1,6 @@
+.store {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  margin: auto;
+}
