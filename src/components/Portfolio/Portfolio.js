@@ -9,7 +9,7 @@ export const Portfolio = () => {
 
   const [selected, setSelected] = useState("All");
 
-  const projects = selected === "All" ? allProjects : allProjects.filter(project => project.category === selected)
+  const filteredProjects = selected === "All" ? allProjects : allProjects.filter(project => project.category === selected);
 
   return (
     <div className={style.portfolio}>
@@ -18,7 +18,7 @@ export const Portfolio = () => {
         selected={selected}
         onSelectFilter={setSelected}
       />
-      <ProjectList projects={projects} />
+      <ProjectList projects={filteredProjects} />
     </div>
   )
 }
