@@ -1,10 +1,9 @@
 import './App.css';
+import { Stars } from './components';
 
 function App() {
   return (
-    <div className="App">
-      App
-    </div>
+    <Stars count={1} />
   );
 }
 
