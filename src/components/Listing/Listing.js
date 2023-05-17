@@ -1,8 +1,8 @@
 export const Listing = ({ items = [] }) => {
-  
+
   return (
     <div className="item-list">
-      {items.map(item => (
+      {items.map(item =>
         <div key={item.listing_id} className="item">
           <div className="item-image">
             <a href={item.url}>
@@ -24,7 +24,6 @@ export const Listing = ({ items = [] }) => {
               {item.quantity} left</p>
           </div>
         </div>
-      )
       )}
     </div>
   )
