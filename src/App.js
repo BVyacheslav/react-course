@@ -1,10 +1,10 @@
 import './App.css';
+import { Listing } from './components/';
+import etsyData from "./etsy.json";
 
 function App() {
   return (
-    <div className="App">
-      App
-    </div>
+    <Listing items={etsyData} />
   );
 }
 
