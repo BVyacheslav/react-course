@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App" style={{ backgroundColor: rgb }}>
       <div>
-        <input className="hex" value={hex} onChange={handleChange}></input>
+        <input className="hex" value={hex} onChange={handleChange} />
         <p className="rgb">{rgb}</p>
       </div>
     </div>
