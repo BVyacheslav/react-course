@@ -1,3 +1,23 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hex {
+  height: 40px;
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
+}
+
+.rgb {
+  background-color: rgb(48, 48, 48);
+  height: 40px;
+  font-size: 24px;
+  color: white;
+  padding: 10px;
   text-align: center;
 }
