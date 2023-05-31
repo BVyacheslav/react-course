@@ -1,3 +1,61 @@
 .App {
-  text-align: center;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  }
+  
+  form {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 600px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    height: 30px;
+    width: 200px;
+    font-size: 24px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+  
+  .addButton {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 55px;
+    width: 100px;
+    cursor: pointer;
+  }
+  
+  .deleteButton {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .watch {
+    height: 30px;
+    width: 200px;
+    font-size: 24px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+  }
