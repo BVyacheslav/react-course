@@ -1,38 +1,32 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export const Watch = ({ watch, watchIndex, watches, setWatches }) => {
+export const Watch = ({ watch }) => {
 
-  useEffect(()=> {
+  const [time, setTime] = useState('')
 
+  useEffect(() => {
     const updateTime = () => {
       const nowDate = new Date();
-      let newWatches = [...watches];
-
       const time = new Date(nowDate.getTime() + ((nowDate.getTimezoneOffset() + watch.timezone * 60) * 60000)).toString().slice(16, 24)
-      
-      newWatches[watchIndex].time = time;
-      setWatches(newWatches);
+      setTime(time)
     }
 
     updateTime();
-    const interval = setInterval(()=> {
+    const interval = setInterval(() => {
       updateTime();
     }, 1000);
 
-    return ()=>clearInterval(interval);
-}, []);
+    return () => clearInterval(interval);
+  }, []);
 
-  const handleRemove = (city) => () => {
-    setWatches(watches.filter((watch) => watch.city !== city));
-  }
+
 
   return (
     <div className="wrapper">
       <label>{watch.city}</label>
       <span className="watch">
-        {watch.time}
+        {time}
       </span>
-      <button className="deleteButton" onClick={handleRemove(watch.city)}>✘</button>
     </div>
   )
 }

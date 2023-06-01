@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './App.css';
-import { Table } from './components';
 import { Form } from './components';
 import { Watch } from './components';
 
@@ -10,14 +9,16 @@ function App() {
     {
       city: 'Moscow',
       timezone: 3,
-      time: ''
     },
     {
       city: 'Ekaterinburg',
       timezone: 5,
-      time: ''
     },
   ]);
+
+  const handleRemove = (city) => () => {
+    setWatches(watches.filter((watch) => watch.city !== city));
+  }
 
   return (
     <div className="App">
@@ -25,7 +26,12 @@ function App() {
         watches={watches}
         setWatches={setWatches}
       />
-      {watches.map((watch, watchIndex) => <Watch key={watch.city} watch={watch} watchIndex={watchIndex} watches={watches} setWatches={setWatches}/>)}
+      {watches.map((watch) =>
+        <div className="clock" key={watch.city}>
+          <Watch watch={watch} />
+          <button className="deleteButton" onClick={handleRemove(watch.city)}>✘</button>
+        </div>
+      )}
     </div>
   );
 }
