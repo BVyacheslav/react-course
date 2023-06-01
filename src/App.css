@@ -1,3 +1,69 @@
 .App {
-  text-align: center;
-}
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  }
+  
+  form {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 600px;
+  }
+  
+  input {
+    height: 100px;
+    width: 400px;
+    font-size: 24px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+  
+  .addButton {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 55px;
+    width: 100px;
+    cursor: pointer;
+  }
+  
+  .iconButton {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    height: 250px;
+    width: 550px;
+    font-size: 24px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .note {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
