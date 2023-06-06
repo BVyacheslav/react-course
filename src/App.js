@@ -1,9 +1,12 @@
 import './App.css';
+import { Data, Loading, Error } from './components';
 
 function App() {
   return (
     <div className="App">
-      App
+      <Data />
+      <Error />
+      <Loading />
     </div>
   );
 }
