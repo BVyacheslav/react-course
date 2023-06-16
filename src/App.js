@@ -1,9 +1,13 @@
 import './App.css';
+import { Table } from './components';
+import { Form } from './components';
 
 function App() {
+
   return (
     <div className="App">
-      App
+      <Form />
+      <Table />
     </div>
   );
 }
