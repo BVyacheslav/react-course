@@ -6,6 +6,7 @@ export const Table = () => {
   const dispatch = useDispatch();
   const { items } = useSelector((state) => state.items);
   const { selectedItemId } = useSelector((state) => state.form);
+  const { typeFilter } = useSelector((state) => state.filter);
 
   const handleEdit = (item) => (e) => {
     dispatch({
@@ -39,6 +40,7 @@ export const Table = () => {
     <div>
       <div>
         {items.map(item =>
+          item.type.toLowerCase().includes(typeFilter.toLowerCase()) &&
           <div className="item" key={item.id}>
             <span>{'★ ' + item.type + ' ' + item.price}</span>
             <div>
