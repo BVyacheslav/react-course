@@ -16,9 +16,11 @@ export const Facts = () => {
   }
 
   return (
-    <div>
-      <input type="number" min="1" max="5" value={count} onChange={handleChange} />
-      {facts.map(fact => <div key={fact}>{fact}</div>)}
+    <div style={{ marginBottom: '1rem' }}>
+      <label htmlFor="fact">Введите количество фактов: </label>
+      <input id="fact" type="number" min="1" max="5" value={count} onChange={handleChange} />
+      {facts.map(fact => <li key={fact}>{fact}</li>)}
+      <hr />
     </div>
   );
 }
