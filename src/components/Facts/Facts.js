@@ -17,7 +17,7 @@ export const Facts = () => {
 
   return (
     <div style={{ marginBottom: '1rem' }}>
-      <label htmlFor="fact">Введите количество фактов: </label>
+      <label htmlFor="fact">Введите количество фактов (1-5): </label>
       <input id="fact" type="number" min="1" max="5" value={count} onChange={handleChange} />
       {facts.map(fact => <li key={fact}>{fact}</li>)}
       <hr />
